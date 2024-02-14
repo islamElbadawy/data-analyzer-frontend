@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CsvService } from '../../services/csv.service';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-read-csv',
@@ -21,9 +22,16 @@ export class ReadCsvComponent {
 
   processCsv(): void {
     if (this.file) {
-      this.csvService.parseCsv(this.file).subscribe((data) => {
-        this.data = data;
-      });
+      this.csvService
+        .parseCsv(this.file)
+        .pipe(
+          switchMap((data) => {
+            return this.csvService.processData({ dataset: data });
+          })
+        )
+        .subscribe((res) => {
+          console.log(res);
+        });
     }
   }
 }

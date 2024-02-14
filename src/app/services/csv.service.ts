@@ -1,14 +1,14 @@
 // src/app/csv.service.ts
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Papa } from 'ngx-papaparse';
-import { Person } from '../models/person';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CsvService {
-  constructor(private papa: Papa) {}
+  constructor(private papa: Papa, private http: HttpClient) {}
 
   parseCsv(file: File): Observable<any> {
     return new Observable((observer) => {
@@ -20,5 +20,9 @@ export class CsvService {
         header: true,
       });
     });
+  }
+
+  processData(data: any): Observable<any> {
+    return this.http.post('http://127.0.0.1:8000/api/data/', data);
   }
 }
