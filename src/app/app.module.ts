@@ -11,6 +11,7 @@ import { FilterChartDataPipe } from './pipes/filter-chart-data.pipe';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VBarChartComponent } from './components/v-bar-chart/v-bar-chart.component';
 import { ScatterPlotComponent } from './components/scatter-plot/scatter-plot.component';
+import { StatsBoardComponent } from './components/stats-board/stats-board.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ScatterPlotComponent } from './components/scatter-plot/scatter-plot.com
     FilterChartDataPipe,
     VBarChartComponent,
     ScatterPlotComponent,
+    StatsBoardComponent,
   ],
   imports: [
     BrowserModule,
