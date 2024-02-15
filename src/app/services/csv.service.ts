@@ -23,6 +23,9 @@ export class CsvService {
   }
 
   processData(data: any): Observable<any> {
-    return this.http.post('http://127.0.0.1:8000/api/data/', data);
+    return this.http.post(
+      'https://islamelbadawy.pythonanywhere.com/api/data/',
+      data
+    );
   }
 }
