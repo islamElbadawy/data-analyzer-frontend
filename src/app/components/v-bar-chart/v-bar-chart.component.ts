@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-h-bar-chart',
-  templateUrl: './h-bar-chart.component.html',
-  styleUrl: './h-bar-chart.component.css',
+  selector: 'app-v-bar-chart',
+  templateUrl: './v-bar-chart.component.html',
+  styleUrl: './v-bar-chart.component.css',
 })
-export class HBarChartComponent {
+export class VBarChartComponent {
   @Input() data: any;
   chartData: any;
 
@@ -24,9 +24,4 @@ export class HBarChartComponent {
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
   };
-
-  constructor() {}
-  ngOnInit() {
-    console.log(this.data);
-  }
 }

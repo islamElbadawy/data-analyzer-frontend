@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FilterChartDataPipe } from './pipes/filter-chart-data.pipe';
 import { BoxPlotComponent } from './components/box-plot/box-plot.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { HBarChartComponent } from './components/h-bar-chart/h-bar-chart.component';
+import { VBarChartComponent } from './components/v-bar-chart/v-bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { HBarChartComponent } from './components/h-bar-chart/h-bar-chart.compone
     AnalyticsComponent,
     FilterChartDataPipe,
     BoxPlotComponent,
-    HBarChartComponent,
+    VBarChartComponent,
   ],
   imports: [
     BrowserModule,
