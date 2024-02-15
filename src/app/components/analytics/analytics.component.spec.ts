@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReadCsvComponent } from './read-csv.component';
+import { AnalyticsComponent } from './analytics.component';
 
-describe('ReadCsvComponent', () => {
-  let component: ReadCsvComponent;
-  let fixture: ComponentFixture<ReadCsvComponent>;
+describe('AnalyticsComponent', () => {
+  let component: AnalyticsComponent;
+  let fixture: ComponentFixture<AnalyticsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ReadCsvComponent]
+      declarations: [AnalyticsComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ReadCsvComponent);
+    fixture = TestBed.createComponent(AnalyticsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

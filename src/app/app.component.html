@@ -1,7 +1,19 @@
-<!-- src/app/app.component.html -->
-<div style="text-align:center">
-  <h1>
+<main class="container text-center mx-auto p-4">
+  <h1 class="text-3xl font-bold mb-8">
     Welcome to {{ title }}!
   </h1>
-</div>
-<app-read-csv></app-read-csv>
+  <div class="flex gap-4">
+    <!-- src/app/csv-reader/csv-reader.component.html -->
+    <input type="file" accept=".csv" class="border border-gray-300 px-4 py-2" (change)="onFileChange($event)" />
+    <button (click)="processCsv()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+      [disabled]="!uploaded">Process
+      CSV</button>
+    <div class="flex gap-2 items-center">
+      <label>sample size</label>
+      <input type="number" class="border border-gray-300 px-4 py-2" min="10" max="1000" [(ngModel)]="sampleSize" />
+    </div>
+  </div>
+  @if (analytics) {
+  <app-analytics></app-analytics>
+  }
+</main>
