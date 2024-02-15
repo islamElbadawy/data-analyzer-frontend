@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BoxPlotComponent } from './box-plot.component';
+import { ScatterPlotComponent } from './scatter-plot.component';
 
-describe('BoxPlotComponent', () => {
-  let component: BoxPlotComponent;
-  let fixture: ComponentFixture<BoxPlotComponent>;
+describe('ScatterPlotComponent', () => {
+  let component: ScatterPlotComponent;
+  let fixture: ComponentFixture<ScatterPlotComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BoxPlotComponent]
+      declarations: [ScatterPlotComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BoxPlotComponent);
+    fixture = TestBed.createComponent(ScatterPlotComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

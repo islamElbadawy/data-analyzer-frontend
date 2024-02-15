@@ -8,17 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { FormsModule } from '@angular/forms';
 import { FilterChartDataPipe } from './pipes/filter-chart-data.pipe';
-import { BoxPlotComponent } from './components/box-plot/box-plot.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VBarChartComponent } from './components/v-bar-chart/v-bar-chart.component';
+import { ScatterPlotComponent } from './components/scatter-plot/scatter-plot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnalyticsComponent,
     FilterChartDataPipe,
-    BoxPlotComponent,
     VBarChartComponent,
+    ScatterPlotComponent,
   ],
   imports: [
     BrowserModule,

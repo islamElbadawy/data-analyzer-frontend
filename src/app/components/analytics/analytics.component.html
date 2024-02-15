@@ -3,11 +3,15 @@
     <app-v-bar-chart [data]="data['averages_by_title']['Margins of Supply Chain Emission Factors'] | filterChartData"
         [xAxisLabel]="'2017 NAICS Title'" [yAxisLabel]="'Margins of Supply Chain Emission Factors'"></app-v-bar-chart>
 
-    <app-v-bar-chart [data]="data['averages_by_title']['Supply Chain Emission Factors with Margins'] | filterChartData"
+    <!-- <app-v-bar-chart [data]="data['averages_by_title']['Supply Chain Emission Factors with Margins'] | filterChartData"
         [xAxisLabel]="'2017 NAICS Title'" [yAxisLabel]="'Supply Chain Emission Factors with Margins'"></app-v-bar-chart>
 
     <app-v-bar-chart
         [data]="data['averages_by_title']['Supply Chain Emission Factors without Margins'] | filterChartData"
         [xAxisLabel]="'2017 NAICS Title'"
-        [yAxisLabel]="'Supply Chain Emission Factors without Margins'"></app-v-bar-chart>
+        [yAxisLabel]="'Supply Chain Emission Factors without Margins'"></app-v-bar-chart> -->
+
+
+    <h2 class="text-2xl font-sans font-bold">Correlation Matrix</h2>
+    <app-scatter-plot [data]="data['correlation_matrix']"></app-scatter-plot>
 </div>

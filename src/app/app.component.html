@@ -5,13 +5,13 @@
   <div class="flex gap-4">
     <!-- src/app/csv-reader/csv-reader.component.html -->
     <input type="file" accept=".csv" class="border border-gray-300 px-4 py-2" (change)="onFileChange($event)" />
-    <button (click)="processCsv()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-      [disabled]="!uploaded">Process
-      CSV</button>
     <div class="flex gap-2 items-center">
       <label>sample size</label>
       <input type="number" class="border border-gray-300 px-4 py-2" min="10" max="1000" [(ngModel)]="sampleSize" />
     </div>
+    <button (click)="processCsv()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+      [disabled]="!uploaded">Process
+      CSV</button>
   </div>
   @if (analytics) {
   <app-analytics [data]="analytics"></app-analytics>

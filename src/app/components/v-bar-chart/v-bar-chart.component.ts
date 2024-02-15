@@ -17,9 +17,9 @@ export class VBarChartComponent {
   gradient = false;
   showLegend = false;
   showXAxisLabel = true;
-  @Input() xAxisLabel = '2017 NAICS Title';
+  @Input() xAxisLabel = '';
   showYAxisLabel = true;
-  @Input() yAxisLabel = 'Population';
+  @Input() yAxisLabel = '';
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
