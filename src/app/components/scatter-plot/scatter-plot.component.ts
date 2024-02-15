@@ -19,10 +19,10 @@ export class ScatterPlotComponent {
   yAxisLabel: string = '';
   showYAxisLabel: boolean = true;
   xAxisLabel: string = '';
-  maxRadius: number = 20;
-  minRadius: number = 5;
-  yScaleMin: number = 70;
-  yScaleMax: number = 85;
+  maxRadius: number = 5;
+  minRadius: number = 1;
+  yScaleMin: number = 0;
+  yScaleMax: number = 1.5;
 
   colorScheme: { domain: string[] } = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
