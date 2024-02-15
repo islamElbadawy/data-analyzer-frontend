@@ -1,1 +1,13 @@
-<p>analytics works!</p>
+<div *ngIf="data" class="flex flex-col gap-8 mt-8">
+    <h2>Averages by Titles</h2>
+    <app-h-bar-chart [data]="data['averages_by_title']['Margins of Supply Chain Emission Factors'] | filterChartData"
+        [xAxisLabel]="'2017 NAICS Title'" [yAxisLabel]="'Margins of Supply Chain Emission Factors'"></app-h-bar-chart>
+
+    <app-h-bar-chart [data]="data['averages_by_title']['Supply Chain Emission Factors with Margins'] | filterChartData"
+        [xAxisLabel]="'2017 NAICS Title'" [yAxisLabel]="'Supply Chain Emission Factors with Margins'"></app-h-bar-chart>
+
+    <app-h-bar-chart
+        [data]="data['averages_by_title']['Supply Chain Emission Factors without Margins'] | filterChartData"
+        [xAxisLabel]="'2017 NAICS Title'"
+        [yAxisLabel]="'Supply Chain Emission Factors without Margins'"></app-h-bar-chart>
+</div>

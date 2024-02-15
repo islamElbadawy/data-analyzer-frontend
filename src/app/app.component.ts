@@ -38,7 +38,6 @@ export class AppComponent {
         )
         .subscribe((res) => {
           this.analytics = res;
-          console.log(this.analytics);
         });
     }
   }

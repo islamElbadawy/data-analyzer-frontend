@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import * as echarts from 'echarts';
 
 @Component({
   selector: 'app-analytics',
@@ -7,4 +8,23 @@ import { Component, Input } from '@angular/core';
 })
 export class AnalyticsComponent {
   @Input() data: any;
+  chartData: any;
+
+  constructor() {}
+
+  ngOnInit() {
+    this.chartData = this.transformChartData(
+      this.data['averages_by_title'][
+        'Supply Chain Emission Factors without Margins'
+      ]
+    );
+    console.log(this.data);
+  }
+
+  transformChartData(chartData: any): any[] {
+    return Object.keys(chartData).map((category) => ({
+      name: category,
+      value: chartData[category],
+    }));
+  }
 }
